@@ -19,8 +19,8 @@ function fetchJoke() {
         .then(jokeData => {
             console.log(jokeData); 
 
-            if (jokeData.setup) {
-                addJokeToTable(jokeData.setup, selectedCategory); 
+            if (jokeData) {
+                addJokeToTable(jokeData, selectedCategory); 
             } else {
                 console.error("Erreur : aucune blague reçue.");
             }
