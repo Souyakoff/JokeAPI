@@ -7,7 +7,7 @@ const userJokeInput = document.getElementById('userJokeInput');
 // Fonction pour récupérer une blague depuis l'API
 function fetchJoke() {
     const selectedCategory = document.getElementById('categorySelect').value; 
-    const apiUrl = `https://v2.jokeapi.dev/joke/${selectedCategory}?lang=fr&blacklistFlags=nsfw,religious,political,racist,sexist,explicit`;
+    const apiUrl = `https://v2.jokeapi.dev/joke/${selectedCategory}?type=twopart&lang=fr&blacklistFlags=nsfw,religious,political,racist,sexist,explicit`;
 
     fetch(apiUrl)
         .then(response => {
