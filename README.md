@@ -7,7 +7,7 @@
 - Ajouter des blagues personnalisées au tableau.
 - Supprimer une blague du tableau.
 - Vider le tableau entier.
-- 
+  
 ## Utilisation
 
 1. **Récupérer une blague** : Sélectionnez une catégorie dans le menu déroulant, puis cliquez sur le bouton "Récupérer une blague".
