@@ -1,4 +1,4 @@
-# Générateur de Blagues - API JokeAPI
+# Générateur de Blagues avec JokeAPI
 
 ## Fonctionnalités
 
