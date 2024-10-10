@@ -10,8 +10,8 @@ body {
 }
 
 .table th {
-    background-color: #6c757d; /* Couleur de fond des en-têtes */
-    color: #ffffff; /* Couleur du texte des en-têtes */
+    background-color: #6c757d;
+    color: #ffffff; 
 }
 
 #fetchJokeBtn {
