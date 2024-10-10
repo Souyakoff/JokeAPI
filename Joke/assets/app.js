@@ -1,4 +1,3 @@
-
 const fetchJokeBtn = document.getElementById('fetchJokeBtn');
 const clearTableBtn = document.getElementById('clearTableBtn');
 const addJokeBtn = document.getElementById('addJokeBtn');
