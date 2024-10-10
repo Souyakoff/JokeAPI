@@ -1,4 +1,4 @@
-// Sélectionner les éléments du DOM
+
 const fetchJokeBtn = document.getElementById('fetchJokeBtn');
 const clearTableBtn = document.getElementById('clearTableBtn');
 const addJokeBtn = document.getElementById('addJokeBtn');
@@ -7,7 +7,7 @@ const userJokeInput = document.getElementById('userJokeInput');
 
 // Fonction pour récupérer une blague depuis l'API
 function fetchJoke() {
-    const selectedCategory = document.getElementById('categorySelect').value;  // Récupérer la catégorie sélectionnée
+    const selectedCategory = document.getElementById('categorySelect').value; 
     const apiUrl = `https://v2.jokeapi.dev/joke/${selectedCategory}`;
 
     fetch(apiUrl)
@@ -15,13 +15,13 @@ function fetchJoke() {
             if (!response.ok) {
                 throw new Error(`Erreur HTTP : ${response.status}`);
             }
-            return response.json();  // Transformer la réponse en JSON
+            return response.json(); 
         })
         .then(jokeData => {
-            console.log(jokeData);  // Pour vérifier les données reçues
+            console.log(jokeData); 
 
             if (jokeData.joke) {
-                addJokeToTable(jokeData.joke, selectedCategory); // Passer la catégorie ici
+                addJokeToTable(jokeData.joke, selectedCategory); 
             } else {
                 console.error("Erreur : aucune blague reçue.");
             }
@@ -35,14 +35,14 @@ function fetchJoke() {
 function addJokeToTable(joke, category) {
     const row = document.createElement('tr');
     const jokeCell = document.createElement('td');
-    const categoryCell = document.createElement('td'); // Nouvelle cellule pour la catégorie
+    const categoryCell = document.createElement('td');
     const actionCell = document.createElement('td');
 
     // Ajouter la blague
     jokeCell.textContent = joke;
 
     // Ajouter la catégorie
-    categoryCell.textContent = category; // Afficher la catégorie
+    categoryCell.textContent = category; 
 
     // Ajouter le bouton pour supprimer la blague
     const deleteButton = document.createElement('button');
@@ -55,7 +55,7 @@ function addJokeToTable(joke, category) {
     // Ajouter les cellules à la ligne
     actionCell.appendChild(deleteButton);
     row.appendChild(jokeCell);
-    row.appendChild(categoryCell); // Ajouter la cellule de catégorie
+    row.appendChild(categoryCell);
     row.appendChild(actionCell);
     
     // Ajouter la ligne au tableau
@@ -64,21 +64,21 @@ function addJokeToTable(joke, category) {
 
 // Fonction pour ajouter la blague de l'utilisateur
 function addUserJoke() {
-    const userJoke = userJokeInput.value.trim(); // Récupérer la blague de l'utilisateur
-    const selectedCategory = document.getElementById('categorySelect').value; // Récupérer la catégorie sélectionnée
+    const userJoke = userJokeInput.value.trim();
+    const selectedCategory = document.getElementById('categorySelect').value; 
     if (userJoke) {
-        addJokeToTable(userJoke, selectedCategory); // Passez la catégorie ici
-        userJokeInput.value = ''; // Réinitialiser le champ de saisie
+        addJokeToTable(userJoke, selectedCategory); 
+        userJokeInput.value = '';
     } else {
         alert("Veuillez entrer une blague avant de l'ajouter.");
     }
 
-    // Fonction pour vider le tableau
+
 
 }
 // Fonction pour vider le tableau
 function clearTable() {
-    jokesTableBody.innerHTML = ''; // Vide le corps du tableau
+    jokesTableBody.innerHTML = ''; 
 }
 
 
