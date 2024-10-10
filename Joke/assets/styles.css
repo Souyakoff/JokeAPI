@@ -1,0 +1,41 @@
+/* styles.css */
+body {
+    background-color: #343a40; /* Couleur de fond sombre */
+    color: #ffffff; /* Couleur du texte */
+}
+
+.table {
+    background-color: #495057; /* Couleur de fond du tableau */
+    color: #ffffff; /* Couleur du texte du tableau */
+}
+
+.table th {
+    background-color: #6c757d; /* Couleur de fond des en-têtes */
+    color: #ffffff; /* Couleur du texte des en-têtes */
+}
+
+#fetchJokeBtn {
+    background-color: #007bff !important; /* Couleur de fond pour le bouton Récupérer une blague */
+}
+
+.btn-success {
+    background-color: #28a745 !important; /* Couleur de fond pour le bouton Ajouter la blague */
+}
+
+.btn-danger {
+    background-color: #dc3545 !important; /* Couleur de fond pour le bouton Vider le tableau */
+}
+
+/* Ajout de styles pour les boutons au survol */
+.btn:hover {
+    opacity: 0.8; /* Réduction de l'opacité au survol */
+}
+
+/* styles.css */
+.form-container {
+    border: 2px solid #ffffff; /* Couleur de la bordure */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espacement intérieur */
+    background-color: rgba(255, 255, 255, 0.1); /* Couleur de fond avec transparence */
+}
+
